@@ -8,7 +8,7 @@ public class Shoot : MonoBehaviour
     public Transform hand; 
     public GameObject projectilePrefab;
     public Transform target;              
-    public float chargeDuration = 2f;
+    public float chargeDuration = 5f;
 
     private void Start()
     {

@@ -252,7 +252,7 @@ MonoBehaviour:
   hand: {fileID: 2043594794}
   projectilePrefab: {fileID: 2263346909450605126, guid: 11b13f37c1cffe54b915c8eb0a06692c, type: 3}
   target: {fileID: 1058283569}
-  chargeDuration: 1
+  chargeDuration: 8.5
 --- !u!136 &802338123
 CapsuleCollider:
   m_ObjectHideFlags: 0
