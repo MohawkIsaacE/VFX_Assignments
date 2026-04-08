@@ -35,7 +35,8 @@ public class Projectile : MonoBehaviour
         // Check if reached target
         if (Vector3.Distance(transform.position, target.position) < 0.3f)
         {
-            SpawnImpactOnGround();
+            //SpawnImpactOnGround();
+            Instantiate(impactPrefab, transform.position, Quaternion.identity);
             Camera.main.GetComponent<CameraShake>().Shake();
             Destroy(gameObject);
         }
