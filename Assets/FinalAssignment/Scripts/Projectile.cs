@@ -33,7 +33,7 @@ public class Projectile : MonoBehaviour
         transform.position += direction * speed * Time.deltaTime;
 
         // Check if reached target
-        if (Vector3.Distance(transform.position, target.position) < 0.3f)
+        if (Vector3.Distance(transform.position, target.position) < 0.1f)
         {
             //SpawnImpactOnGround();
             Instantiate(impactPrefab, transform.position, Quaternion.identity);
