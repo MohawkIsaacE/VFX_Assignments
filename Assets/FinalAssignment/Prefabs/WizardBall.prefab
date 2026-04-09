@@ -4902,6 +4902,7 @@ GameObject:
   - component: {fileID: 8686545193946910559}
   - component: {fileID: 6636249860106553044}
   - component: {fileID: 9081401321468369162}
+  - component: {fileID: -987744464210279290}
   m_Layer: 0
   m_Name: WizardBall
   m_TagString: Untagged
@@ -5015,6 +5016,22 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   groundCheckDistance: 50
+  projectileSpawnTimer: 0
+  projectileSpawn: {fileID: 6794088661958524588, guid: 0fd0d436995c54d43ace931a7eb30fe3, type: 3}
+--- !u!114 &-987744464210279290
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2263346909450605126}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6deafe6e512d68143a96ec5cc81ff0ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  durationTimer: 0
+  maxDurationTime: 3
 --- !u!1 &7594361969764695264
 GameObject:
   m_ObjectHideFlags: 0

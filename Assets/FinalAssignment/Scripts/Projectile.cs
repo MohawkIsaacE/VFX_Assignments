@@ -10,6 +10,9 @@ public class Projectile : MonoBehaviour
     public LayerMask groundMask;      // layers considered ground
     public float groundCheckDistance = 50f;
 
+    public float projectileSpawnTimer = 0;
+    public GameObject projectileSpawn;
+
     private Vector3 direction;
 
     private void Start()
@@ -39,6 +42,14 @@ public class Projectile : MonoBehaviour
             Instantiate(impactPrefab, transform.position, Quaternion.identity);
             Camera.main.GetComponent<CameraShake>().Shake();
             Destroy(gameObject);
+        }
+
+        projectileSpawnTimer += Time.deltaTime;
+
+        if (projectileSpawnTimer >= 0.3f)
+        {
+            Instantiate(projectileSpawn, transform.position, Quaternion.identity);
+            projectileSpawnTimer = 0;
         }
     }
 
