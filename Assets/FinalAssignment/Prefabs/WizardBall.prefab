@@ -5018,6 +5018,7 @@ MonoBehaviour:
   groundCheckDistance: 50
   projectileSpawnTimer: 0
   projectileSpawn: {fileID: 6794088661958524588, guid: 0fd0d436995c54d43ace931a7eb30fe3, type: 3}
+  environmentalPrefab: {fileID: 2082387710670908942, guid: fb8adaeaed952b64895a91654b1950f0, type: 3}
 --- !u!114 &-987744464210279290
 MonoBehaviour:
   m_ObjectHideFlags: 0

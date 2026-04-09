@@ -12,6 +12,7 @@ public class Projectile : MonoBehaviour
 
     public float projectileSpawnTimer = 0;
     public GameObject projectileSpawn;
+    public GameObject environmentalPrefab;
 
     private Vector3 direction;
 
@@ -38,7 +39,7 @@ public class Projectile : MonoBehaviour
         // Check if reached target
         if (Vector3.Distance(transform.position, target.position) < 0.1f)
         {
-            //SpawnImpactOnGround();
+            SpawnEnvironmentalOnGround();
             Instantiate(impactPrefab, transform.position, Quaternion.identity);
             Camera.main.GetComponent<CameraShake>().Shake();
             Destroy(gameObject);
@@ -53,7 +54,7 @@ public class Projectile : MonoBehaviour
         }
     }
 
-    private void SpawnImpactOnGround()
+    private void SpawnEnvironmentalOnGround()
     {
         if (impactPrefab == null) return;
 
@@ -61,6 +62,6 @@ public class Projectile : MonoBehaviour
         Vector3 rayStart = target.position + Vector3.up;
 
         if (Physics.Raycast(rayStart, Vector3.down, out hit, groundCheckDistance, groundMask))
-            Instantiate(impactPrefab, hit.point, Quaternion.identity);
+            Instantiate(environmentalPrefab, hit.point, Quaternion.identity);
     }
 }
